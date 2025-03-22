@@ -2,7 +2,7 @@ import React from "react";
 import therapyImage from '../images/therapy (1).jpg';
 import '../index.css';
 
-export default function Hero() {
+export default function Hero( {onBookClick}) {
     return (
         <section className="relative h-screen w-full overflow-hidden flex bg-gray-200">
             {/* Text Side */}
@@ -14,7 +14,9 @@ export default function Hero() {
                     <p className="text-xl mb-6">
                         Our team of specialist clinical psychologists delivers evidence-based treatment tailored exclusively to OCD.
                     </p>
-                    <button className="bg-blue-800 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl text-lg transition">
+                    <button
+                        onClick={onBookClick}
+                        className="bg-blue-800 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl text-lg transition">
                         Book a Free Consultation
                     </button>
                     <p className="text-sm text-gray-600 mt-4">
